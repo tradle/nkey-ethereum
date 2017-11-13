@@ -26,7 +26,7 @@ function gen (opts, cb) {
 }
 
 function genSync (opts) {
-  const wallet = Wallet.generate(true)
+  const wallet = Wallet.generate(opts.icapDirect)
   return fromJSON({
     networkName: opts.networkName,
     priv: wallet.privKey,
