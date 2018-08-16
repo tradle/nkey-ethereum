@@ -6,12 +6,14 @@ const type = 'ethereum'
 const curve = 'secp256k1'
 const UNCOMPRESSED_PREFIX = new Buffer('04', 'hex')
 
-module.exports = nkey.wrapAPI({
+const impl = nkey.wrapAPI({
   type,
   gen,
   genSync,
   fromJSON
 })
+
+module.exports = impl
 
 function gen (opts, cb) {
   process.nextTick(function () {
@@ -27,7 +29,7 @@ function gen (opts, cb) {
 
 function genSync (opts) {
   const wallet = Wallet.generate(opts.icapDirect)
-  return fromJSON({
+  return impl.fromJSON({
     networkName: opts.networkName,
     priv: wallet.privKey,
     pub: Buffer.concat([UNCOMPRESSED_PREFIX, wallet.pubKey]),
