@@ -1,6 +1,6 @@
 
 const nkey = require('nkey')
-const Wallet = require('ethereumjs-wallet')
+const Wallet = require('@tradle/ethereumjs-wallet')
 const type = 'ethereum'
 const curve = 'secp256k1'
 const UNCOMPRESSED_PREFIX = Buffer.from('04', 'hex')
