@@ -1,8 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "nkey-ethereum",
   "main": "index.js",
-  "devDependencies": {},
   "license": "MIT",
   "dependencies": {
     "@tradle/ethereumjs-wallet": "^0.6.0",
