@@ -4,7 +4,7 @@ const omit = require('object.omit')
 const Wallet = require('ethereumjs-wallet')
 const type = 'ethereum'
 const curve = 'secp256k1'
-const UNCOMPRESSED_PREFIX = new Buffer('04', 'hex')
+const UNCOMPRESSED_PREFIX = Buffer.from('04', 'hex')
 
 const impl = nkey.wrapAPI({
   type,
@@ -66,7 +66,7 @@ function fromJSON (json) {
 }
 
 function toHexBuffer (val) {
-  return Buffer.isBuffer(val) ? val : new Buffer(val, 'hex')
+  return Buffer.isBuffer(val) ? val : Buffer.from(val, 'hex')
 }
 
 function toHexString (val) {
