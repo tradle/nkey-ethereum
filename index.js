@@ -1,6 +1,5 @@
 
 const nkey = require('nkey')
-const omit = require('object.omit')
 const Wallet = require('ethereumjs-wallet')
 const type = 'ethereum'
 const curve = 'secp256k1'
