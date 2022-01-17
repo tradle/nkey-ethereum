@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@tradle/ethereumjs-wallet": "^0.6.0",
+    "@tradle/ethereumjs-wallet": "^0.7.0",
     "nkey": "^2.0.2"
   }
 }
